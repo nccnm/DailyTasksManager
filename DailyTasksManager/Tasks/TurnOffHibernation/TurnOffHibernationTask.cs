@@ -1,19 +1,16 @@
 ﻿using Quartz;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DailyTasksManager.Tasks.TurnOffHibernation
 {
     public class TurnOffHibernationTask : AbstractTask
     {
-        private int INTERVAL_IN_SECOND = 10;
+        private readonly int INTERVAL_IN_SECOND = 10;
 
         public TurnOffHibernationTask()
         {
             jobName = "Turn off Hibernation";
             groupName = "System";
-            triggerName = "Turn off Hibernation Trigger"; 
+            triggerName = "Turn off Hibernation Trigger";
         }
 
         public override IJobDetail CreateJobDetail()

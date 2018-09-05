@@ -1,5 +1,4 @@
 ﻿using DailyTasksManager.Log;
-using DailyTasksManager.Logging.LogProviders;
 using DailyTasksManager.Tasks.TurnOffHibernation;
 using log4net;
 using log4net.Config;
@@ -7,11 +6,9 @@ using Quartz;
 using Quartz.Impl;
 using Quartz.Logging;
 using System;
-using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
 using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DailyTasksManager.Tasks
@@ -25,7 +22,7 @@ namespace DailyTasksManager.Tasks
             ConfigureLog();
 
             return this;
-        }       
+        }
 
         public async Task Run()
         {

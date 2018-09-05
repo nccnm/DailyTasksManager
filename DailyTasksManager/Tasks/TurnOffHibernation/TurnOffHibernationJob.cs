@@ -1,8 +1,5 @@
 ﻿using DailyTasksManager.Logging;
 using Quartz;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DailyTasksManager.Tasks.TurnOffHibernation
@@ -13,9 +10,9 @@ namespace DailyTasksManager.Tasks.TurnOffHibernation
 
         public async Task Execute(IJobExecutionContext context)
         {
-            System.Diagnostics.Process.Start("powercfg.exe", "-h off");           
+            System.Diagnostics.Process.Start("powercfg.exe", "-h off");
 
-            var logMessage = "Turn off Hibernation Task!";           
+            var logMessage = "Turn off Hibernation Task!";
             Logger.Info(logMessage);
 
             //await Task.Yield();

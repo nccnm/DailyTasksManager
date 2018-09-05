@@ -1,13 +1,10 @@
 ﻿using Quartz;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DailyTasksManager.Tasks.TurnOffHibernation
 {
     public class PreventSleepModeTask : AbstractTask
     {
-        private int INTERVAL_IN_SECOND = 10;
+        private readonly int INTERVAL_IN_SECOND = 10;
 
         public PreventSleepModeTask()
         {
